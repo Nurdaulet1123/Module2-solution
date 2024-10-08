@@ -2,7 +2,7 @@
 body, html {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: Comic Sans MS, sans-serif;
 }
 
 /* Контейнер для страницы */
@@ -18,7 +18,7 @@ header {
 }
 
 h1 {
-    font-size: 2em;
+    font-size: 3em;
     color: #333;
 }
 
@@ -35,22 +35,22 @@ h1 {
 
 /* Цвета фона для каждой секции */
 .section1 {
-    background-color: #d9534f; /* Цвет для первой секции - светло-красный */
+    background-color: lightgrey; /* Цвет для первой секции - светло-красный */
 }
 
 .section2 {
-    background-color: #5bc0de; /* Цвет для второй секции - светло-синий */
+    background-color: lightgrey; /* Цвет для второй секции - светло-синий */
 }
 
 .section3 {
-    background-color: #5cb85c; /* Цвет для третьей секции - светло-зеленый */
+    background-color: lightgrey; /* Цвет для третьей секции - светло-зеленый */
 }
 
 /* Цвета для заголовков каждой секции */
 .section-title {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: -16px;
+    right: -1px;
     padding: 5px;
     border: 1px solid black;
     font-size: 1.2em;
@@ -58,17 +58,17 @@ h1 {
 }
 
 .section1 .section-title {
-    background-color: #c9302c; /* Темно-красный */
+    background-color: red; /* Темно-красный */
     color: white;
 }
 
 .section2 .section-title {
-    background-color: #31b0d5; /* Темно-синий */
+    background-color: blue; /* Темно-синий */
     color: white;
 }
 
 .section3 .section-title {
-    background-color: #449d44; /* Темно-зеленый */
+    background-color: green; /* Темно-зеленый */
     color: white;
 }
 
@@ -105,4 +105,3 @@ h1 {
         float: none;
     }
 }
-
