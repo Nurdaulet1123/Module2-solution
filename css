@@ -1,61 +1,59 @@
-/* Base styling */
-body {
-    font-family: Arial, sans-serif;
+/* Basic reset for margins and padding */
+* {
     margin: 0;
     padding: 0;
-}
-
-header {
-    text-align: center;
-    padding: 20px;
-    background-color: #333;
-    color: white;
-}
-
-/* Container and sections */
-.container {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.section {
     box-sizing: border-box;
+}
+
+/* General styles for the container */
+.container {
+    width: 80%;
+    margin: 0 auto;
     padding: 20px;
-    border: 1px solid black;
-    margin: 10px;
-    position: relative;
 }
 
+/* Section styles */
+.section {
+    border: 1px solid black; /* Border requirement */
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #f4f4f4; /* Section background color */
+}
+
+/* Section title styles */
 .section-title {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background-color: yellow;
-    padding: 5px;
-    border: 1px solid black;
+    border: 1px solid black; /* Border requirement */
+    background-color: #ddd; /* Unique background color for title */
+    padding: 10px;
+    position: relative;
+    top: -20px; /* Adjust position to appear at the top */
+    display: inline-block; /* Ensure the title does not occupy full width */
+    right: 0;
+    float: right; /* Position in the top right corner */
 }
 
-/* Desktop View */
-@media (min-width: 992px) {
-    .section {
-        width: 30%;
+/* Content paragraph styles */
+.section-content {
+    margin-top: 20px; /* Ensure spacing between title and text */
+}
+
+/* Responsive styles for tablet and mobile */
+@media (max-width: 991px) {
+    .container {
+        width: 90%;
     }
 }
 
-/* Tablet View */
-@media (min-width: 768px) and (max-width: 991px) {
-    #section1, #section2 {
-        width: 45%;
-    }
-
-    #section3 {
-        width: 100%;
-    }
-}
-
-/* Mobile View */
 @media (max-width: 767px) {
+    .section-title {
+        float: none; /* Remove floating for mobile view */
+        position: static; /* Make it stack above the content */
+        display: block;
+        text-align: center;
+    }
+
     .section {
-        width: 100%;
+        padding: 15px; /* Adjust padding for smaller screens */
     }
 }
+
