@@ -1,59 +1,124 @@
-/* Basic reset for margins and padding */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+ * {
+        box-sizing: border-box;
+    }
 
-/* General styles for the container */
-.container {
-    width: 80%;
-    margin: 0 auto;
-    padding: 20px;
-}
+    body {
+        background-color: white;
+    }
 
-/* Section styles */
-.section {
-    border: 1px solid black; /* Border requirement */
-    margin: 20px 0;
-    padding: 20px;
-    background-color: #f4f4f4; /* Section background color */
-}
+    h1 {
+       margin-bottom: 15px;
+    text-align: center;
+    color: #ff4532;
+    font-size: 50px;
+    }
 
-/* Section title styles */
-.section-title {
-    border: 1px solid black; /* Border requirement */
-    background-color: #ddd; /* Unique background color for title */
-    padding: 10px;
-    position: relative;
-    top: -20px; /* Adjust position to appear at the top */
-    display: inline-block; /* Ensure the title does not occupy full width */
-    right: 0;
-    float: right; /* Position in the top right corner */
-}
-
-/* Content paragraph styles */
-.section-content {
-    margin-top: 20px; /* Ensure spacing between title and text */
-}
-
-/* Responsive styles for tablet and mobile */
-@media (max-width: 991px) {
-    .container {
+    section {
+        position: relative;
+        padding: 15px;
         width: 90%;
     }
-}
 
-@media (max-width: 767px) {
-    .section-title {
-        float: none; /* Remove floating for mobile view */
-        position: static; /* Make it stack above the content */
-        display: block;
+    p {
+        position: relative;
+        clear: right;
+    }
+
+    div {
+        position: relative;
+        background-color: gray;
+        border: 3.5px solid black;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: auto;
+    }
+
+    .sub1 {
+        float: right;
+        width: 100px;
+        padding: 5px;
+        margin: -3px -3px 0px;
+        border: 3.5px solid black;
         text-align: center;
+        font-size: 125%;
+        font-weight: bold;
+        background-color: #FFB6C1;
+
     }
 
-    .section {
-        padding: 15px; /* Adjust padding for smaller screens */
-    }
-}
+    .sub2 {
+        float: right;
+        color: white;
+        width: 100px;
+        padding: 5px;
+        margin: -3px -3px 0px;
+        border: 3.5px solid black;
+        text-align: center;
+        font-size: 125%;
+        font-weight: bold;
+        background-color: #FF0000;
 
+    }
+
+    .sub3 {
+        color: black;
+        float: right;
+        width: 100px;
+        padding: 5px;
+         margin: -3px -3px 0px;
+        border: 3.5px solid black;
+        text-align: center;
+        font-size: 125%;
+        font-weight: bold;
+        background-color: rgb(223, 212, 121);
+
+    }
+
+    .content {
+        padding: 5px;
+        border: none;
+        background-color: gray;
+        font-family: Helvetica;
+        color: black;
+        margin: 3px ;
+        height: 150px;
+        overflow: auto;
+    }
+
+    .row {
+        width: 90%;
+    }
+
+    /*desktop version*/
+    @media (min-width: 992px) {
+        .column-lg-4 {
+            float: left;
+            width: 33.33%;
+        }
+    }
+
+    /*tablet version*/
+    @media (min-width: 768px) and (max-width: 991px) {
+        .colmn-md-6 {
+            float: left;
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .colmn-md-12 {
+            float: left;
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    /*mobile version*/
+    @media (max-width: 767px) {
+        .colmn-sm-12 {
+            float: left;
+            width: 100%;
+        }
+    }
