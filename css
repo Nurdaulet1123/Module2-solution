@@ -1,124 +1,99 @@
- * {
-        box-sizing: border-box;
-    }
+ /* Основные стили */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
 
-    body {
-        background-color: white;
-    }
+.container {
+    width: 100%;
+    padding: 20px;
+}
 
-    h1 {
-       margin-bottom: 15px;
+header {
     text-align: center;
-    color: #ff4532;
-    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2em;
+    color: #333;
+}
+
+/* Стили для секций */
+.section {
+    border: 1px solid black;
+    margin: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+    color: black; /* Цвет текста */
+}
+
+/* Цвета фона для каждой секции */
+.section1 {
+    background-color: grey; /* Курица - светло-красный */
+}
+
+.section2 {
+    background-color: grey; /* Говядина - фиолетовый */
+}
+
+.section3 {
+    background-color: grey; /* Суши - зеленый */
+}
+
+/* Цвета для заголовков каждой секции */
+.section-title {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px;
+    border: 1px solid black;
+}
+
+.section1 .section-title {
+    background-color: red; /* Заголовок курицы - темно-красный */
+}
+
+.section2 .section-title {
+    background-color: purple; /* Заголовок говядины - темно-фиолетовый */
+}
+
+.section3 .section-title {
+    background-color: green; /* Заголовок суши - темно-зеленый */
+}
+
+/* Адаптивный дизайн: Десктоп */
+@media (min-width: 992px) {
+    .section {
+        float: left;
+        width: 30%;
+    }
+}
+
+/* Адаптивный дизайн: Планшет */
+@media (min-width: 768px) and (max-width: 991px) {
+    .section {
+        width: 45%;
+        float: left;
     }
 
-    section {
-        position: relative;
-        padding: 15px;
-        width: 90%;
+    .section2 {
+        clear: left;
     }
 
-    p {
-        position: relative;
-        clear: right;
+    .section3 {
+        width: 95%;
+        clear: left;
     }
+}
 
-    div {
-        position: relative;
-        background-color: gray;
-        border: 3.5px solid black;
-        width: 100%;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: auto;
+/* Адаптивный дизайн: Мобильные устройства */
+@media (max-width: 767px) {
+    .section {
+        width: 95%;
+        margin: 10px auto;
+        float: none;
     }
-
-    .sub1 {
-        float: right;
-        width: 100px;
-        padding: 5px;
-        margin: -3px -3px 0px;
-        border: 3.5px solid black;
-        text-align: center;
-        font-size: 125%;
-        font-weight: bold;
-        background-color: #FFB6C1;
-
-    }
-
-    .sub2 {
-        float: right;
-        color: white;
-        width: 100px;
-        padding: 5px;
-        margin: -3px -3px 0px;
-        border: 3.5px solid black;
-        text-align: center;
-        font-size: 125%;
-        font-weight: bold;
-        background-color: #FF0000;
-
-    }
-
-    .sub3 {
-        color: black;
-        float: right;
-        width: 100px;
-        padding: 5px;
-         margin: -3px -3px 0px;
-        border: 3.5px solid black;
-        text-align: center;
-        font-size: 125%;
-        font-weight: bold;
-        background-color: rgb(223, 212, 121);
-
-    }
-
-    .content {
-        padding: 5px;
-        border: none;
-        background-color: gray;
-        font-family: Helvetica;
-        color: black;
-        margin: 3px ;
-        height: 150px;
-        overflow: auto;
-    }
-
-    .row {
-        width: 90%;
-    }
-
-    /*desktop version*/
-    @media (min-width: 992px) {
-        .column-lg-4 {
-            float: left;
-            width: 33.33%;
-        }
-    }
-
-    /*tablet version*/
-    @media (min-width: 768px) and (max-width: 991px) {
-        .colmn-md-6 {
-            float: left;
-            width: 50%;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .colmn-md-12 {
-            float: left;
-            width: 100%;
-            margin-left: auto;
-            margin-right: auto;
-        }
-    }
-
-    /*mobile version*/
-    @media (max-width: 767px) {
-        .colmn-sm-12 {
-            float: left;
-            width: 100%;
-        }
-    }
+}
